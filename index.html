@@ -10,17 +10,27 @@
             border-spacing: 0;
             empty-cells: show;
         }
-        table tr:nth-child(2n-1){
-           background-color: #f0f0f0; 
-        }
         td {
             padding-left: 5px;
         }
     </style>
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('#thetable').DataTable( {
+                "pageLength": -1,
+                "lengthMenu": [[50, 100, 250, 500, -1], [50, 100, 250, 500, 'All']],
+            } );
+        } );
+    </script>
 </head>
 
 <body>
-    <table>
+    <table id="thetable" class="display">
         <caption>
             EVE Online asset safety places goods from the following systems into the listed destination systems.
         </caption>
