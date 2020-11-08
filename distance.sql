@@ -16,6 +16,7 @@ WHERE b.security >= 0.0
   AND ROUND(b.security, 1) < 0.5
   AND a.security < 0.0
   AND a.securityClass IS NOT NULL
+  AND a.regionId != 10000070  -- no asset safety for Pochven origins
   AND  -- Make sure destination system has a station
     (SELECT 1
      FROM staStations AS stations
