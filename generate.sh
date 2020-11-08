@@ -27,7 +27,7 @@ cat <<EOF
             \$('#thetable').DataTable( {
                 "pageLength": -1,
                 "lengthMenu": [[50, 100, 250, 500, -1], [50, 100, 250, 500, 'All']],
-                "columnDefs": [{targets: [0,2,3,5,6], className: "dt-body-right",}],
+                "columnDefs": [{targets: [0,2,4,6,8], className: "dt-body-right",}],
             } );
         } );
     </script>
@@ -39,22 +39,24 @@ cat <<EOF
             EVE Online asset safety places goods from the following systems into the listed destination systems.
         </caption>
         <colgroup>
-            <col span="3" class="sourceSystem">
-            <col span="3" class="destSystem">
+            <col span="4" class="sourceSystem">
+            <col span="4" class="destSystem">
             <col>
         </colgroup>
         <thead>
             <tr>
-                <th colspan="3">Source System</th>
-                <th colspan="3">Destination System</th>
+                <th colspan="4">Source System</th>
+                <th colspan="4">Destination System</th>
             </tr>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Security</th>
+                <th scope="col">Region</th>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Security</th>
+                <th scope="col">Region</th>
                 <th scope="col">distance</th>
             </tr>
         </thead>
